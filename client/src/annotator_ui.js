@@ -740,8 +740,8 @@ var AnnotatorUI = (function($, window, undefined) {
         $('#span_highlight_link').attr('href', linkHash);
         if (span && !reselectedSpan) {
           $('#span_form_reselect, #span_form_delete, #span_form_add_fragment').show();
-          keymap[$.ui.keyCode.DELETE] = 'span_form_delete';
-          keymap[$.ui.keyCode.INSERT] = 'span_form_reselect';
+          keymap['Q'.charCodeAt(0)] = 'span_form_delete';
+          keymap['W'.charCodeAt(0)] = 'span_form_reselect';
           keymap['S-' + $.ui.keyCode.ENTER] = 'span_form_add_fragment';
           $('#span_notes').val(span.annotatorNotes || '');
         } else {
@@ -752,8 +752,8 @@ var AnnotatorUI = (function($, window, undefined) {
         }
         if (span && !reselectedSpan && span.offsets.length > 1) {
           $('#span_form_reselect_fragment, #span_form_delete_fragment').show();
-          keymap['S-' + $.ui.keyCode.DELETE] = 'span_form_delete_fragment';
-          keymap['S-' + $.ui.keyCode.INSERT] = 'span_form_reselect_fragment';
+          keymap['Q'.charCodeAt(0)] = 'span_form_delete_fragment';
+          keymap['W'.charCodeAt(0)] = 'span_form_reselect_fragment';
         } else {
           $('#span_form_reselect_fragment, #span_form_delete_fragment').hide();
           keymap['S-' + $.ui.keyCode.DELETE] = null;

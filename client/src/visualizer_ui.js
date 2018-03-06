@@ -1512,7 +1512,7 @@ var VisualizerUI = (function($, window, undefined) {
           return false;
         } else if (code == $.ui.keyCode.LEFT) {
           return moveInFileBrowser(-1);
-        } else if (code === $.ui.keyCode.RIGHT) {
+        } else if (code === $.ui.keyCode.SPACE) {
           return moveInFileBrowser(+1);
         } else if (evt.shiftKey && code === $.ui.keyCode.UP) {
           autoPaging(true);
